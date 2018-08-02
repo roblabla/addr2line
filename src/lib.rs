@@ -24,10 +24,10 @@
 #![deny(missing_docs)]
 
 #![cfg_attr(not(feature = "std"), no_std)]
-#![cfg_attr(feature = "nightly", feature(alloc))]
+#![cfg_attr(feature = "alloc", feature(alloc))]
 
-#[cfg(all(not(feature = "std"), not(feature = "nightly")))]
-compile_error!("You must enable either the std or nightly feature");
+#[cfg(all(not(feature = "std"), not(feature = "alloc")))]
+compile_error!("You must enable either the std or alloc feature");
 
 #[cfg(not(feature = "std"))]
 extern crate alloc;
