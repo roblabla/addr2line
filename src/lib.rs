@@ -46,6 +46,7 @@ extern crate fallible_iterator;
 extern crate gimli;
 extern crate intervaltree;
 extern crate lazycell;
+#[cfg(feature = "object")]
 extern crate object;
 #[cfg(feature = "rustc-demangle")]
 extern crate rustc_demangle;
